@@ -1,0 +1,119 @@
+<video autoplay [muted]="true" loop id="myVideo">
+    <source src="../../assets/mountains.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+<div class="container">
+    <div class="card" *ngIf="isPhone">
+        <!-- <div class="card-img">
+            <img src="../../assets/air-con.png" alt="">
+        </div> -->
+        <div class="content">
+        <div class="card-title">
+            <p>סנובול מיזוג אוויר</p>
+            <p class="sub">מיזוג אוויר בע"מ</p>
+        </div>
+        <div class="card-body">
+            <p class="body-sub">ייעוץ תיקונים והתקנות לכל סוגי המזגנים</p>
+            <ul>
+                <li>טיפולים מונעים</li>
+                <li>ניקוי ושטיפת פילטרים</li>
+                <li>בדקה תקופתית</li>
+            </ul>
+
+        </div>
+        <div>
+            <button class="btn btn-danger  x mb-4 p-3">קרא עוד</button>
+        </div>
+    </div>
+    </div>
+        <div class="page" *ngIf="!isPhone">
+
+        <div class="enter" >
+            <div class="card">
+                <!-- <div class="card-img">
+                    <img src="../../assets/air-con.png" alt="">
+                </div> -->
+                <div class="content">
+                <div class="card-title">
+                    <p>סנובול מיזוג אוויר</p>
+                    <p class="sub">מיזוג אוויר בע"מ</p>
+                </div>
+                <div class="card-body">
+                    <p class="body-sub">ייעוץ תיקונים והתקנות לכל סוגי המזגנים</p>
+                    <ul>
+                        <li>טיפולים מונעים</li>
+                        <li>ניקוי ושטיפת פילטרים</li>
+                        <li>בדקה תקופתית</li>
+                    </ul>
+
+                </div>
+                <div>
+                    <button class="btn btn-danger  x mb-4 p-3">קרא עוד</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+<div class="our-service p-6">
+    <p>נסיון של 22 שנה , תחזוקה של חברות גדולות בשביעות רצון , שירות מקצועי</p>
+    <button class="mybtn" >המלצות</button>
+</div>
+
+<div class="our-service mt-20 ">
+
+    
+    <h2 class="pt-5">עבודות </h2>
+     <div class="works-wrapper" >
+         <div *ngFor="let w of works;let i = index">
+             <div class="works-card" id="n{{i}}" (click)="showMore(w)" (mouseleave)="cardClick(w,i)" (mouseenter)="cardClick(w,i)">
+                <h2 class="location" >{{w.location}}</h2>
+             </div>
+             <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content" id="modal-content">
+                  <p></p>
+                </div>
+              
+              </div>
+         </div>
+
+     </div>
+
+</div>
+
+<div  class="our-service mt-20 white">
+    <h2 class="rate-title">המלצות</h2>
+    <div class="wrap ">
+        <div class="card-rate" *ngFor="let i of ratings">
+                <p> {{i.name}}</p>
+                <p class="rate"> {{i.rate}}</p>
+        </div>
+    </div>
+
+    <div class="our-service pb-5 white">
+        <div class="card-contact">
+            <div class="semi-contact">
+                <h2 style="color:#19334A;" class="semi-t">השאר לנו הודעה</h2>
+        
+            </div>
+            <div class="ccard">
+                <p><i class="bi bi-telephone"></i>&nbsp;054-463-0939</p>
+                <p><i class="bi bi-telephone"></i>&nbsp;050-444-8155</p>
+                <a href="https://www.facebook.com/%D7%A1%D7%A0%D7%95%D7%95%D7%91%D7%95%D7%9C-%D7%9E%D7%99%D7%96%D7%95%D7%92-%D7%90%D7%95%D7%95%D7%99%D7%A8-%D7%91%D7%A2%D7%9E-177430682689427/?ref=page_internal"><i class="bi bi-facebook"></i>&nbsp;SnowBall</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="our-service foot">
+    <ul>
+        <li class="strong">
+            סנוובול מזגנים וקירור בע"מ
+        </li>
+      
+    </ul>
+</div>
