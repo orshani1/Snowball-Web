@@ -59,6 +59,21 @@ export class WelcomeComponent implements OnInit {
             <p>${value.desc}</p>
             <p>שביעות רצון : ${value.rate}</p>`
     }
+    
+  }
+  toWorks(){
+     let element =  document.getElementById('works');
+     if(element){
+       
+       element.scrollIntoView({behavior:"smooth",block:"end",inline:"nearest"});
+      }
+  };
+  toRate(){
+    let element = document.getElementById('rate');
+    if(element){
+      element.scrollIntoView({behavior:"smooth",block:"start",inline:"nearest"});
 
+    }
   }
 }
+

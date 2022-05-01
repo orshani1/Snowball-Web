@@ -271,3 +271,48 @@ video{
 .strong{
     font-weight: 700;
 }
+@media (max-width:2000px) {
+    .our-service{
+        font-size: 30px;
+        
+       
+    }    
+    .works-wrapper{
+        display: grid;
+        width: 400px;
+        grid-template-columns: auto;
+    }
+    .wrap{
+        padding-right: 30rem;
+        display: grid;
+        grid-template-columns:  auto;
+
+    }
+    .card-contact{
+        
+        width: 200px;
+        margin-right: 20rem;
+    }
+    .semi-t{
+        font-size: 50px;
+        margin-right: 10rem;
+    }
+}
+@media (max-width:1000px) {
+    *{
+        justify-content: center;
+        align-items: center;
+    }
+    .our-service{
+        padding: 20rem;
+        width: 100%;
+    }
+    .our-service{
+        margin-top: 20rem;
+        transform: translateX(-400px);
+    }
+    .foot{
+        display: none;
+    }
+  
+}
